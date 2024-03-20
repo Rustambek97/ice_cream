@@ -1,0 +1,30 @@
+.menu {
+    background-color: #333; /* Menyu orqa fon rangi */
+    padding: 10px; /* Menyu qavs ichki bo'shlig'i */
+}
+
+.menu ul {
+    list-style-type: none; /* Ro'yxat belgilarini o'chirish */
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline; /* Har bir ro'yxat elementini chiziqli ko'rsatish */
+}
+
+.menu ul li a {
+    color: #fff; /* A'zolarning yozuvi rangi */
+    text-decoration: none; /* A'zolarning stilini o'chirish */
+    padding: 10px 20px; /* A'zolar orasidagi bo'shliqlar */
+    display: inline-block; /* Blok holatida joylashish */
+}
+
+.menu ul li a:hover {
+    background-color: #555; /* A'zolarning ustiga o'tilganda fon rangi */
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}

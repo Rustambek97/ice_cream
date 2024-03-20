@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Hodimlar qo'shish {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/jadval.css">
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Hodim:</th>
+            <th> {{ b['hodim'][1] }} {{ b['hodim'][2] }} </th>
+        </tr>
+        <tr>
+            <th>Ish boshlagan sana:</th>
+            <th> {{ b['hodim'][4] }} </th>
+        </tr>
+        <tr>
+            <th> Bugunki sana: </th>
+            <th> {{ b['vaqt'] }} </th>
+        </tr>
+        <tr>
+            <th> Bugungacha: </th>
+            <th> <span id="bugungacha">{{ b['farq'] }}</span> kun</th>
+        </tr>
+    </table>
+
+{% endblock %}

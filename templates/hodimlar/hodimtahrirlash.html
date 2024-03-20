@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+    <label for=""> ism: </label>
+    <input type="text" name="ism" value="{{ hodim[1] }}"> <br><br>
+
+    <label for=""> familiya: </label>
+    <input type="text" name="familiya" value="{{ hodim[2] }}"> <br><br>
+
+    <label for=""> tel: </label>
+    <input type="text" name="tel" value="{{ hodim[3] }}"> <br><br>
+
+    <label for=""> ish boshlagan sana: </label>
+    <input type="date" name="ish_boshlash" value="{{ hodim[4] }}"> <br><br>
+
+    <label for=""> karta raqam: </label>
+    <input type="text" name="karta" value="{{ hodim[5] }}"> <br><br>
+
+    <button type="submit"> save changes </button>
+</form>
+
+{% endblock %}

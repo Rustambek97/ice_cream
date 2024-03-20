@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Hodim qo'shish {% endblock %}
+
+{% block content %}
+<form method="post">
+     <label> Ism kiriting: </label>
+    <input type="text" name="ism"> <br><br>
+
+    <label> Familiya kiriting: </label>
+    <input type="text" name="familiya"> <br><br>
+
+    <label> Telefon raqamini kiriting: </label>
+    <input type="text" name="tel"> <br><br>
+
+    <label> Ish boshlagan sanasini kiriting: </label>
+    <input type="text" name="ish_boshlash_sana"> <br><br>
+
+    <label> Karta raqamini kiriting: </label>
+    <input type="text" name="karta"> <br><br>
+
+    <button type="submit"> Qo'shish </button>
+</form>
+
+{% endblock %}

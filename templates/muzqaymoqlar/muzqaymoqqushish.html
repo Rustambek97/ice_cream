@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} add muzqaymoq {% endblock %}
+
+{% block content %}
+    <form method="post">
+        <label for="">nomi: </label>
+        <input type="text" name="nomi"> <br><br>
+
+        <label for="">narxi: </label>
+        <input type="number" min="1" name="narxi"> <br><br>
+
+        <label for="">turi: </label>
+        <select name="turi">
+            {% for i in turlar %}
+                <option value="{{ i[0] }}" > {{ i[1] }} </option>
+            {% endfor %}
+        </select> <br><br>
+
+        <label for="">ishlab chiqilgan sana: </label>
+        <input type="datetime-local" name="createdate"> <br><br>
+
+        <label for="">yaroqlilik muddati: </label>
+        <input type="datetime-local" name="deletedate"> <br><br>
+
+        <label for="">soni: </label>
+        <input type="number" min="1" name="soni"> <br><br>
+
+        <button type="submit"> Qo'shish </button>
+    </form>
+{% endblock %}

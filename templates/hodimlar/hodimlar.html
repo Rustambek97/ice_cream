@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Hodimlar sahifa {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/jadval.css">
+{% endblock %}
+
+{% block content %}
+<h1>Hodimlar sahifasi</h1>
+    <div class="row my-3">
+        <div class="col-4">
+            <form class="d-flex" role="search" method="post">
+                <input name="qidiruv" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th> id </th>
+            <th> ism </th>
+            <th> familiya </th>
+            <th> telefon </th>
+        </tr>
+
+        {% for i in hodimlar %}
+        <tr>
+            <td> {{ i[0] }} </td>
+            <td><a href="/hodimlar/{{i[0]}}"> {{ i[1] }} </a></td>
+            <td> {{ i[2] }} </td>
+            <td> {{ i[3] }} </td>
+            <td>
+                <a href="/hodim/tahrir/{{i[0]}}"> edit </a>
+            </td>
+
+            <td>
+                <a href="/hodim/del/{{i[0]}}"> delete </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/hodimqushish"> add </a>
+{% endblock %}

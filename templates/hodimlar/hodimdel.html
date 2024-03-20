@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        <p>
+            <b>{{ hodimlar[1] }} {{ hodimlar[2] }}</b> Bu hodimni haqiqatdan o'chirmoqchimiz?
+        </p>
+        <button type="submit"> O'chirish </button>
+        <a href="/hodimlar"> Bekor qilish </a>
+     </form>
+{% endblock %}

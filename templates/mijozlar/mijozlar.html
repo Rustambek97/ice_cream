@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Mijozlar {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/jadval.css">
+{% endblock %}
+
+
+{% block content %}
+    <h1>Mijozlar sahifasi</h1>
+    <table>
+        <tr>
+            <th> id </th>
+            <th> ism </th>
+            <th> familiya </th>
+        </tr>
+        {% for i in mijozlar %}
+        <tr>
+            <td> {{ i[0] }} </td>
+            <td> {{ i[1] }} </td>
+            <td> {{ i[2] }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
