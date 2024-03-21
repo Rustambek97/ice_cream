@@ -20,9 +20,15 @@
     </tr>
     {% for i in muzqaymoqlar %}
     <tr>
+
         <td> {{ i[0] }}</td>
         <td> {{ i[1] }}</td>
         <td> {{ i[2] }}</td>
+        {% if i[7] %}
+        <td>
+            <img width="50px" src="{{ url_for('static', filename='media-files/' + i[7]) }}">
+        </td>
+        {% endif %}
     </tr>
     {% endfor %}
 </table>

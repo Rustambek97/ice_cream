@@ -3,7 +3,7 @@
 {% block title %} add muzqaymoq {% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <label for="">nomi: </label>
         <input type="text" name="nomi"> <br><br>
 
@@ -25,6 +25,9 @@
 
         <label for="">soni: </label>
         <input type="number" min="1" name="soni"> <br><br>
+
+        <label for="">muzqaymoq rasmi: </label>
+        <input type="file" name="rasm"> <br><br>
 
         <button type="submit"> Qo'shish </button>
     </form>

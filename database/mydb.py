@@ -54,11 +54,11 @@ class Database:
         sql = "SELECT * FROM turi"
         return self.ishlatish(sql, fetchall=True)
 
-    def muzqaymoqqushish(self, nomi, narxi, turi_id, ishlab_chiq_sana, yaroqlilik_muddati, soni):
+    def muzqaymoqqushish(self, nomi, narxi, turi_id, ishlab_chiq_sana, yaroqlilik_muddati, soni, rasm):
         sql = f"""
-        INSERT INTO muzqaymoqlar(nomi, narxi, turi_id, ishlab_chiq_sana, yaroqlilik_muddati, soni)
+        INSERT INTO muzqaymoqlar(nomi, narxi, turi_id, ishlab_chiq_sana, yaroqlilik_muddati, soni, rasm)
         VALUES
-        ('{nomi}', {narxi}, {turi_id}, '{ishlab_chiq_sana}', '{yaroqlilik_muddati}', {soni})
+        ('{nomi}', {narxi}, {turi_id}, '{ishlab_chiq_sana}', '{yaroqlilik_muddati}', {soni}, '{rasm}')
         """
         self.ishlatish(sql, commit=True)
 

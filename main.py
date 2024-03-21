@@ -1,7 +1,14 @@
+import os
 from flask import Flask, render_template, request, redirect
 from database.mydb import mydb
 from datetime import date
+from werkzeug.utils import secure_filename
+
 app = Flask(__name__)
+
+UPLOAD_FOLDER = 'static/media-files'
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
@@ -66,7 +73,11 @@ def muzqaymoqadd():
         chiqqan_sana = request.form['createdate']
         tugash_sana = request.form['deletedate']
         soni = request.form['soni']
-        mydb.muzqaymoqqushish(nomi, narxi, tur_id, chiqqan_sana, tugash_sana, soni)
+
+        rasm = request.files['rasm']
+        mydb.muzqaymoqqushish(nomi, narxi, tur_id, chiqqan_sana, tugash_sana, soni, rasm.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], rasm.filename)
+        rasm.save(file_path)
         return redirect("/muzqaymoqlar")
 
 @app.route("/hodim/tahrir/<id>", methods=['GET', 'POST'])
